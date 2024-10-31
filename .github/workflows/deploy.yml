@@ -64,3 +64,15 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+  information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Run custom action
+        uses: ./.github/actions/deploy-s3-javascript
+        # with:
+        #   bucket-name: ${{ secrets.BUCKET_NAME }}
+        #   region: ${{ secrets.REGION }}
+        #   access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+        #   secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}

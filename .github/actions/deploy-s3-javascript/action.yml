@@ -12,7 +12,8 @@ inputs:
     description: 'The folder containing the deployable files.'
     required: true
 outputs:
-  website-url: 'The URL of the deployed website.'
+  website-url:
+    description: 'The URL of the deployed website.'
 runs:
   using: 'node16'
   main: 'main.js'
